@@ -10,11 +10,23 @@ import java.util.Map;
 
 public class Constants {
 
+
+    public final static int BASE_HIRAGANA_TEST = 0;
+    public final static int BASE_KATAKANA_TEST = 1;
+    public final static int BASE_ALL_TEST = 2;
+
     //Hiragana and katakana 平假名和片假名
 
     //基本平假名五十音
-    public final static ArrayMap<String,String> baseHiraganaMap = new ArrayMap() ;
-    static {
+    public static ArrayMap<String,String> baseHiraganaMap = new ArrayMap() ;
+
+    //基本片假名五十音
+    public final static ArrayMap<String,String> baseKatakanaMap = new ArrayMap() ;
+
+    //基本平/片假名五十音
+    public final static ArrayMap<String,String> baseAllMap = new ArrayMap() ;
+
+    public static ArrayMap<String, String> getBaseHiraganaMap() {
         baseHiraganaMap.put("あ", "a");
         baseHiraganaMap.put("い", "i");
         baseHiraganaMap.put("う", "u");
@@ -76,11 +88,12 @@ public class Constants {
         baseHiraganaMap.put("を", "o");
 
         baseHiraganaMap.put("ん", "n");
+        return baseHiraganaMap;
     }
 
-    //基本片假名五十音
-    public final static ArrayMap<String,String> baseKatakanaMap = new ArrayMap() ;
-    static {
+
+    public static ArrayMap<String, String> getBaseKatakanaMap() {
+
         baseKatakanaMap.put("ア", "a");
         baseKatakanaMap.put("イ", "i");
         baseKatakanaMap.put("ウ", "u");
@@ -142,15 +155,14 @@ public class Constants {
         baseKatakanaMap.put("ヲ", "o");
 
         baseKatakanaMap.put("ン", "n");
+        return baseKatakanaMap;
     }
 
-    //基本平/片假名五十音
-    public final static ArrayMap<String,String> baseAllMap = new ArrayMap() ;
-    static {
+    public static ArrayMap<String, String> getBaseAllMap() {
         baseAllMap.putAll(baseHiraganaMap);
         baseAllMap.putAll(baseKatakanaMap);
+        return baseAllMap;
     }
-
 
 }
 

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">JapaneseTest</string>
+    <string name="base_test_bt">五十音测试</string>
+    <string name="voiced_test_bt">浊音测试</string>
+    <string name="bend_test_bt">拗音测试</string>
+
 </resources>
